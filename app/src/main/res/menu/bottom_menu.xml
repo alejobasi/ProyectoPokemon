@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Pokemon"
+        android:icon="@drawable/pokemon"
+        android:id="@+id/pokemon"/>
+    <item android:title="Pokedex"
+        android:icon="@drawable/pokedex"
+        android:id="@+id/pokedex"/>
+    <item android:title="Sobres"
+        android:icon="@drawable/pokeball"
+        android:id="@+id/sobres"/>
+</menu>
