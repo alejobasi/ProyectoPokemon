@@ -108,8 +108,8 @@ public class Pokemon {
         this.generacion = generacion;
     }
 
-    public class PokemonGenerator {
-        public  List<Pokemon> generateFirstGenPokemon() {
+
+        public static List<Pokemon> generarPrimeraGen() {
             List<Pokemon> pokemonList = new ArrayList<>();
 
             // Pokémon de la primera generación
@@ -264,4 +264,4 @@ public class Pokemon {
             return pokemonList;
         }
 
-}}
+}
