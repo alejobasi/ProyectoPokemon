@@ -24,6 +24,8 @@ NavController navController;
         EdgeToEdge.enable(this);
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        setSupportActionBar(binding.tituloToolbar);
+
 
         NavHostFragment navHostFragment=(NavHostFragment) getSupportFragmentManager().findFragmentById(binding.fragmentContainerView.getId());
         navController=navHostFragment.getNavController();
@@ -33,10 +35,13 @@ NavController navController;
            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                if (item.getItemId()==R.id.pokemon){
                    navController.navigate(R.id.pokemonFragment);
+                   getSupportActionBar().setTitle("Pokemon");
                } else if (item.getItemId()==R.id.pokedex){
                    navController.navigate(R.id.pokedexFragment);
+                   getSupportActionBar().setTitle("Pokedex");
                } else if (item.getItemId()==R.id.sobres){
                    navController.navigate(R.id.sobresFragment);
+                   getSupportActionBar().setTitle("Sobres");
                }
                return true;
            }
