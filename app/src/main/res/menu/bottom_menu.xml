@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Pokemon"
-        android:icon="@drawable/pokemon"
+        android:icon="@drawable/pokeball"
         android:id="@+id/pokemon"/>
     <item android:title="Pokedex"
         android:icon="@drawable/pokedex"

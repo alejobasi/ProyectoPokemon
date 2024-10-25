@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.proyectopokemon.databinding.FragmentPokemonBinding;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 
 public class PokemonFragment extends Fragment {
@@ -45,21 +47,16 @@ binding.mostrarGeneraciones.setAdapter(new FragmentStateAdapter(this) {
     @Override
     public Fragment createFragment(int position) {
         switch (position) {
-            case 1->{
-                return new Pokemon_gen2Fragment();
-            }
-
-
-            case 2->{
-                return new Pokemon_gen3Fragment();
-            }
-            case 3->{
-                return new Pokemon_gen4Fragment();
-            }
-            default->{
+            case 0:
                 return new Pokemon_gen1Fragment();
-            }
-
+            case 1:
+                return new Pokemon_gen2Fragment();
+            case 2:
+                return new Pokemon_gen3Fragment();
+            case 3:
+                return new Pokemon_gen4Fragment();
+            default:
+                return new Pokemon_gen1Fragment();
         }
     }
 
@@ -69,6 +66,24 @@ binding.mostrarGeneraciones.setAdapter(new FragmentStateAdapter(this) {
     }
 });
 
-
+new TabLayoutMediator(binding.generacionesTap, binding.mostrarGeneraciones, new TabLayoutMediator.TabConfigurationStrategy() {
+    @Override
+    public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+        switch (position) {
+            case 0:
+                tab.setText("Generación 1");
+                break;
+            case 1:
+                tab.setText("Generación 2");
+                break;
+            case 2:
+                tab.setText("Generación 3");
+                break;
+            case 3:
+                tab.setText("Generación 4");
+                break;
+        }
+    }
+}).attach();
         };
     }

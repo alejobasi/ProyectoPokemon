@@ -25,7 +25,7 @@ NavController navController;
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.tituloToolbar);
-
+        binding.bottomNavigationView.setItemIconTintList(null);
 
         NavHostFragment navHostFragment=(NavHostFragment) getSupportFragmentManager().findFragmentById(binding.fragmentContainerView.getId());
         navController=navHostFragment.getNavController();

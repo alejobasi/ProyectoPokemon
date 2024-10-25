@@ -27,13 +27,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:itemIconTint="@null"
         app:menu="@menu/bottom_menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/titulo_toolbar"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
@@ -42,4 +43,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Pokemon" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
