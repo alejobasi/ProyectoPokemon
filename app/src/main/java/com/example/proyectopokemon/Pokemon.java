@@ -1,6 +1,7 @@
 package com.example.proyectopokemon;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Pokemon {
     private int id;
@@ -108,7 +109,7 @@ public class Pokemon {
     }
 
     public class PokemonGenerator {
-        public static List<Pokemon> generateFirstGenPokemon() {
+        public  List<Pokemon> generateFirstGenPokemon() {
             List<Pokemon> pokemonList = new ArrayList<>();
 
             // Pokémon de la primera generación
@@ -263,4 +264,4 @@ public class Pokemon {
             return pokemonList;
         }
 
-}
+}}
