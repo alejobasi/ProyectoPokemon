@@ -6,14 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Pokemon_gen1Fragment">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="107dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="344dp"
-        android:text="GEN1"
-        android:textSize="40dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="412dp"
+        android:layout_height="730dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
