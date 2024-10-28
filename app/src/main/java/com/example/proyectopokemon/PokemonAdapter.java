@@ -8,7 +8,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyectopokemon.databinding.PokemonViewBinding;
 
+import java.util.List;
+
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
+
+    private final List<Pokemon> listaDePokemon;
+
+
+    public PokemonAdapter(List<Pokemon> lista) {
+        this.listaDePokemon = lista;
+    }
+
     @NonNull
     @Override
     public PokemonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -18,13 +28,15 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull PokemonViewHolder holder, int position) {
 
-        Pokemon pokemon=
+        Pokemon pokemon= listaDePokemon.get(position);
+        //holder.binding.imagenPokemonView.setImageResource();
+        holder.binding.nombrePokemonView.setText(pokemon.getNombre());
 
     }
 
 
     @Override
     public int getItemCount() {
-        return 0;
+        return Pokemon.generarPrimeraGen().size();
     }
 }
